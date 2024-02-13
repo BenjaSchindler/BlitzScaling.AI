@@ -7,7 +7,7 @@ import os
 from langchain_community.utilities import SQLDatabase
 
 # Set OpenAI API Key
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = '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'
 
 # Define the template for generating SQL queries
 template = """Based on the table schema below, write a SQL query that would answer the user's question:
