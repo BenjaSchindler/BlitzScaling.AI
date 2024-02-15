@@ -15,7 +15,7 @@ from langchain_community.tools.sql_database.tool import QuerySQLDataBaseTool
 # Set OpenAI API Key
 os.environ["OPENAI_API_KEY"] = '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'
 
-db = SQLDatabase.from_uri("sqlite:///./Chinook.db")
+db = SQLDatabase.from_uri("sqlite:///./User-Details.db")
 
 question = input("What is you question: ")
 

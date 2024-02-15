@@ -1,1 +1,0 @@
-os.environ["OPENAI_API_KEY"] = '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'

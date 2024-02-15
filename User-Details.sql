@@ -8,17 +8,15 @@
 -- Table structure for table `user_details`
 --
 
-CREATE TABLE IF NOT EXISTS `user_details` (
-  `user_id` int(11) NOT NULL AUTO_INCREMENT,
-  `username` varchar(255) DEFAULT NULL,
-  `first_name` varchar(50) DEFAULT NULL,
-  `last_name` varchar(50) DEFAULT NULL,
-  `gender` varchar(10) DEFAULT NULL,
-  `password` varchar(50) DEFAULT NULL,
-  `status` tinyint(10) DEFAULT NULL,
-  PRIMARY KEY (`user_id`)
-) ENGINE=MyISAM  DEFAULT CHARSET=latin1 AUTO_INCREMENT=10001 ;
-
+CREATE TABLE IF NOT EXISTS user_details (
+  user_id INTEGER PRIMARY KEY AUTOINCREMENT,
+  username TEXT DEFAULT NULL,
+  first_name TEXT DEFAULT NULL,
+  last_name TEXT DEFAULT NULL,
+  gender TEXT DEFAULT NULL,
+  password TEXT DEFAULT NULL,
+  status INTEGER DEFAULT NULL
+);
 --
 -- Dumping data for table `user_details`
 --
