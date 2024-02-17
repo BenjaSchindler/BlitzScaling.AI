@@ -1,5 +1,6 @@
+import os
+import sys
 from operator import itemgetter
-
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
 from langchain_core.runnables import RunnablePassthrough
@@ -10,10 +11,15 @@ import os
 from langchain_community.utilities import SQLDatabase
 from langchain_community.tools.sql_database.tool import QuerySQLDataBaseTool
 
+
+APIKEY = os.getenv('OPENAI_API_KEY')
+if not APIKEY:
+    sys.exit("API key not found. Please set the OPENAI_API_KEY environment variable.")
+
 #Falta un async await para answer
 
 # Set OpenAI API Key
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = APIKEY
 
 db = SQLDatabase.from_uri("sqlite:///./Chinook.db")
 

@@ -1,4 +1,5 @@
 from operator import itemgetter
+from constant import APIKEY
 
 from langchain_core.output_parsers import StrOutputParser
 from langchain_core.prompts import PromptTemplate
@@ -13,7 +14,7 @@ from langchain_community.tools.sql_database.tool import QuerySQLDataBaseTool
 #Falta un async await para answer
 
 # Set OpenAI API Key
-os.environ["OPENAI_API_KEY"] = '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'
+os.environ["OPENAI_API_KEY"] = APIKEY
 
 db = SQLDatabase.from_uri("sqlite:///./User-Details.db")
 
